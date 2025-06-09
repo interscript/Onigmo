@@ -20,7 +20,7 @@ clang \
 	-Wl,--lto-O3 \
 	-Wl,-z,stack-size=$[8 * 1024 * 1024] \
 	-o onigmo.wasm \
-	$IPATH -I wasm -I . -I enc/unicode -Wl,-error-limit=0 \
+	$IPATH -I wasm -I . -I enc/unicode -Wl,--error-limit=0 \
 	regparse.c regcomp.c regexec.c regext.c \
 	regenc.c regtrav.c regversion.c st.c \
 	enc/unicode.c enc/ascii.c enc/utf_8.c \
