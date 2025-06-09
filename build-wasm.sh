@@ -1,7 +1,7 @@
 # Download WASI-SDK from:
 # https://github.com/WebAssembly/wasi-sdk/releases
 
-if [ $BUILD == 'wasi' ]; then
+if [ "$BUILD" == 'wasi' ]; then
 	echo "* Building with WASI"
 	IPATH="-I$WASI_PATH/include"
 	STDLIB="$WASI_PATH/lib/wasm32-wasi/libc.a"
